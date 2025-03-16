@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2d5a3d, #1e3e2a);
+
+  background-image: url("/assets/Background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  color: #e8f5e9;
+}
+h1 {
+  font-weight: 200;
+  font-size: 5em;
+  text-align: center;
+  color: #b3e5be;
+  font-family: woodFont;
+  z-index: 10;
+}
+.bg-overlay {
+  height: 200vh;
+  width: 100%;
+  background-color: #00000052;
+  position: fixed;
+}
+.stopwatch-container {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #4a7856;
+}
+
+.time-display {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 20px;
+  background: #4a7856;
+  border-radius: 15px;
+}
+
+.time-unit {
+  text-align: center;
+}
+
+.time-value {
+  font-size: 3.5em;
+  font-weight: 300;
+  background: #2d5a3d;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin: 5px;
+  min-width: 120px;
+  font-family: myFirstFont;
+}
+
+.time-label {
+  font-size: 1.2em;
+  color: #c8e6c9;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #4a7856;
+  color: #e8f5e9;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: #5d9c6f;
+}
+
+.laps-container {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(5px);
+  margin-top: 30px;
+  font-weight: 200;
+}
+
+.lap-entry {
+  background: #4a7856;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.owner-input {
+  background: transparent;
+  border: 1px solid #c8e6c9;
+  padding: 8px;
+  color: #e8f5e9;
+  border-radius: 4px;
+  width: 150px;
+}
+
+::placeholder {
+  color: #e8f5e9;
+  opacity: 1; /* Firefox */
+}
+@font-face {
+  font-family: woodFont;
+  src: url(/assets/fonts/Jfwildwood-ldYZ.ttf);
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/assets/fonts/AztechForest-9YJa0.otf);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forest Stopwatch</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="bg-overlay"></div>
+    <h1>Forest Stopwatch</h1>
+
+    <div class="stopwatch-container">
+      <div class="time-display">
+        <div class="time-unit">
+          <div class="time-value" id="hours">00</div>
+          <div class="time-label">Hours</div>
+        </div>
+        <div class="time-unit">
+          <div class="time-value" id="minutes">00</div>
+          <div class="time-label">Minutes</div>
+        </div>
+        <div class="time-unit">
+          <div class="time-value" id="seconds">00</div>
+          <div class="time-label">Seconds</div>
+        </div>
+        <div class="time-unit">
+          <div class="time-value" id="milliseconds">00</div>
+          <div class="time-label">Centiseconds</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startPause" onclick="handleStartPause()">Start</button>
+
+        <button onclick="handleReset()">Reset</button>
+        <button onclick="handleLap()">Lap</button>
+      </div>
+    </div>
+
+    <div class="laps-container" id="lapsContainer">
+      <h3>Recorded Times:</h3>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
